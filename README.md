@@ -1,16 +1,103 @@
-# React + Vite
+# 🖐️ AirControl — AI Gesture-Controlled Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+AirControl is an AI-powered gesture-controlled web interface that allows users to interact with a dashboard using hand gestures through their webcam.
 
-Currently, two official plugins are available:
+The project uses computer vision and hand landmark detection to recognize gestures and translate them into actions such as clicking, double-clicking, scrolling, and cursor movement.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+🔗 Live Demo: (https://aircontrol-ai.netlify.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Allow camera permission to interact with the AirControl interface.
 
-## Expanding the Oxlint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- 🖐️ Real-time hand gesture detection
+- ☝️ Index finger — Virtual cursor movement
+- 👌 Pinch — Click
+- 👍 Thumb Up — Double Click
+- ✌️ Two Fingers — Scroll
+- ✊ Fist — Pause/Inactive state
+- 📷 Webcam-based interaction
+- ⚡ Real-time gesture feedback
+- 📊 Interactive dashboard with system statistics
+- 🌐 Browser-based interface
+- 📱 Responsive dashboard UI
+
+## 🧠 How It Works
+
+1. The browser requests webcam access.
+2. MediaPipe detects the user's hand and hand landmarks.
+3. The gesture engine analyzes landmark positions and distances.
+4. The detected gesture is mapped to a specific action.
+5. The dashboard updates the current gesture, action, confidence, and activity information in real time.
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+### Computer Vision
+- MediaPipe Tasks Vision
+- Hand Landmarker
+- Webcam API
+
+### Backend / API
+- Python
+- Flask
+- Flask-CORS
+
+### Tools
+- Git
+- GitHub
+- VS Code
+- Netlify
+
+## 📁 Project Structure
+
+```text
+AirControl/
+│
+├── app/
+│   ├── api.py
+│   ├── controller.py
+│   ├── gesture_engine.py
+│   ├── hand_tracker.py
+│   └── main.py
+│
+├── dashboard/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── camera.js
+│   │   └── gestureEngine.js
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── requirements.txt
+└── README.md
+
+🎯 Gesture Controls
+Gesture	Action
+☝️ Index Finger	Move Virtual Cursor
+👌 Pinch	Click
+👍 Thumb Up	Double Click
+✌️ Two Fingers	Scroll
+
+🔮 Future Improvements
+Multi-hand gesture support
+Custom gesture configuration
+Improved gesture accuracy
+Voice + gesture hybrid control
+More accessibility-focused controls
+Local companion application for OS-level control
+Gesture usage analytics
+Additional browser interaction controls
+
+👩‍💻 Author
+Aarchi Sharma
